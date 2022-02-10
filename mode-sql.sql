@@ -35,3 +35,8 @@ SELECT  year AS "Year",
         south AS "South",
         northeast AS "Northeast"
   FROM tutorial.us_housing_units
+
+/* Limit returned rows to 100 */
+SELECT *
+  FROM tutorial.us_housing_units
+ LIMIT 100
