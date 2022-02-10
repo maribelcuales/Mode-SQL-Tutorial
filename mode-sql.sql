@@ -1,5 +1,7 @@
+/* Query/select all */
 SELECT * FROM tutorial.us_housing_units
 
+/* Query/select all without using * */
 SELECT  year,
         month,
         month_name,
@@ -9,6 +11,7 @@ SELECT  year,
         northeast
   FROM tutorial.us_housing_units
 
+/* Query year, month, and west */
 SELECT  year,
         month, 
         west 
