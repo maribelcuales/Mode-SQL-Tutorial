@@ -45,3 +45,9 @@ SELECT *
 SELECT *
   FROM tutorial.us_housing_units
  WHERE month = 1 
+
+/* Filtering data according to month and limit resutls to 100*/
+SELECT *
+  FROM tutorial.us_housing_units
+ WHERE month = 1 
+ LIMIT = 100
