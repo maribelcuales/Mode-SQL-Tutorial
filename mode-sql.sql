@@ -40,3 +40,8 @@ SELECT  year AS "Year",
 SELECT *
   FROM tutorial.us_housing_units
  LIMIT 100
+
+/* Filtering data according to month */
+SELECT *
+  FROM tutorial.us_housing_units
+ WHERE month = 1 
