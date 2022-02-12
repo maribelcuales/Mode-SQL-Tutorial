@@ -55,5 +55,11 @@ SELECT *
 /* Filter data by month = 5 and limit resutls to 100*/
 SELECT *
   FROM tutorial.us_housing_units
- WHERE month = 5t  
+ WHERE month = 5
+ LIMIT = 100
+
+ /* Return rows where west region produced more than 30,000 units  */
+SELECT *
+  FROM tutorial.us_housing_units
+ WHERE west > 30 
  LIMIT = 100
