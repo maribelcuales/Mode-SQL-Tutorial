@@ -73,5 +73,9 @@ SELECT *
  WHERE west > 30 
  LIMIT = 100
 
+/*Comparison operator on Non-numerical data */
+SELECT *
+  FROM tutorial.us_housing_units
+ WHERE month_name != 'January'
 
 
