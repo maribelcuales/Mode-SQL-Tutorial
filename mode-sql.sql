@@ -58,8 +58,20 @@ SELECT *
  WHERE month = 5
  LIMIT = 100
 
- /* Return rows where west region produced more than 30,000 units  */
+
+/* COMPARISON OPERATORS 
+Equal                     = 
+Not equal to              <> or !=
+Greater than, Less than   >, <
+Greater than or equal to  >=
+Less than or equal to     >=
+*/
+
+/* Return rows where west region produced more than 30,000 units  */
 SELECT *
   FROM tutorial.us_housing_units
  WHERE west > 30 
  LIMIT = 100
+
+
+
