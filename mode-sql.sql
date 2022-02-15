@@ -71,7 +71,6 @@ Less than or equal to     >=
 SELECT *
   FROM tutorial.us_housing_units
  WHERE west > 30 
- LIMIT = 100
 
 /*Comparison operator on Non-numerical data */
 SELECT *
