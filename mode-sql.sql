@@ -78,9 +78,17 @@ SELECT *
  WHERE south < 20
 
 
-/*Comparison operator on Non-numerical data */
+/* NON-NUMERICAL DATA 
+If you're using a comparison operator with values that are non-numeric, you need to put the value in single quotes: 'value'.
+
+Note: SQL uses single quotes to reference column values. 
+
+You can use >, <, and the rest of the comparison operators on non-numeric columns as well—they filter based on alphabetical order.
+
+*/
 SELECT *
   FROM tutorial.us_housing_units
  WHERE month_name != 'January'
 
 
+t a
