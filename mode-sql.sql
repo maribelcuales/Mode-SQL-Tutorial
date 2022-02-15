@@ -70,7 +70,13 @@ Less than or equal to     >=
 /* Return rows where west region produced more than 30,000 units  */
 SELECT *
   FROM tutorial.us_housing_units
- WHERE west > 30 
+ WHERE west > 30
+
+/* Query if south produced 20,000 or fewer housing units */
+SELECT *
+  FROM tutorial.us_housing_units
+ WHERE south < 20
+
 
 /*Comparison operator on Non-numerical data */
 SELECT *
