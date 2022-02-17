@@ -84,7 +84,6 @@ If you're using a comparison operator with values that are non-numeric, you need
 Note: SQL uses single quotes to reference column values. 
 
 You can use >, <, and the rest of the comparison operators on non-numeric columns as well—they filter based on alphabetical order.
-
 */
 SELECT *
   FROM tutorial.us_housing_units
@@ -102,3 +101,21 @@ SELECT *
 SELECT *
   FROM tutorial.us_housing_units
  WHERE month_name = 'February'
+
+
+/* 
+ARITHMETIC IN SQL 
+In SQL, you can only perform arithmetic across columns on values in a given row.
+
+You can only add values in multiple columns from the same row together using +.
+
+if you want to add values across multiple rows, you'll need to use aggregate functions.
+*/
+
+/* The above example produces a column showing the sum of whatever is in the south and west columns for each row.  */
+SELECT year,
+       month,
+       west,
+       south,
+       west + south AS south_plus_west
+  FROM tutorial.us_housing_units
