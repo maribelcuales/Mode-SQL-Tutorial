@@ -119,3 +119,11 @@ SELECT year,
        south,
        west + south AS south_plus_west
   FROM tutorial.us_housing_units
+
+/* You can chain arithmetic functions, including both column names and actual numbers. */
+SELECT year,
+       month,
+       west,
+       south,
+       west + south - 4 * year AS nonsense_column 
+  FROM tutorial.us_housing_units
