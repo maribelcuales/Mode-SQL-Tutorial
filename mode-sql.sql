@@ -158,4 +158,15 @@ SELECT year,
        northeast
   FROM tutorial.us_housing_units
   WHERE west > (midwest + northeast)
-  
+
+/* Query that calculates the percentage of all houses completed in the United States represented by each region. Only return results from the year 2000 and later.
+
+Hint: There should be four columns of percentages. */ 
+SELECT year,
+       month,
+       west/(west + south + midwest + northeast)*100 AS west_pct,
+       south/(west + south + midwest + northeast)*100 AS south_pct,
+       midwest/(west + south + midwest + northeast)*100 AS midwest_pct,
+       northeast/(west + south + midwest + northeast)*100 AS northeast_pct
+  FROM tutorial.us_housing_units
+ WHERE year >= 2000
