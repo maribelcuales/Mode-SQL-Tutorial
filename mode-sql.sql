@@ -148,3 +148,14 @@ SELECT year,
        south,
        (west + south)/2 AS south_west_avg
   FROM tutorial.us_housing_units
+
+/* Write a query that returns all rows for which more units were produced in the West region than in the Midwest and Northeast combined. */
+SELECT year,
+       month,
+       west,
+       south,
+       midwest,
+       northeast
+  FROM tutorial.us_housing_units
+  WHERE west > (midwest + northeast)
+  
