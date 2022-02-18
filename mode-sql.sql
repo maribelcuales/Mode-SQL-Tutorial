@@ -188,3 +188,9 @@ NOT allows you to select rows that do not match a certain condition.
 /* Use dataset from Billboard Music Charts. It contains year-end results of the year's top 100 songs from 1956-2013.  */
 SELECT * 
   FROM tutorial.billboard_top_100_year_end
+
+
+/* Query results order by year and year_rank  */
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ORDER BY year DESC, year_rank
