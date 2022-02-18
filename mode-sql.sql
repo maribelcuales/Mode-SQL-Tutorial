@@ -194,3 +194,10 @@ SELECT *
 SELECT * 
   FROM tutorial.billboard_top_100_year_end
 ORDER BY year DESC, year_rank
+
+/*SQL LIKE Operator 
+LIKE is a logical operator in SQL that allows you to match on similar values rather than exact ones. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE "group" LIKE 'Snoop%'
+
