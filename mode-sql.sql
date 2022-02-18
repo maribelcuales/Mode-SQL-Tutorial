@@ -170,3 +170,21 @@ SELECT year,
        northeast/(west + south + midwest + northeast)*100 AS northeast_pct
   FROM tutorial.us_housing_units
  WHERE year >= 2000
+
+
+/* 
+LOGICAL OPERATORS 
+Logical operators allow you to use multiple comparison operators in one query.
+
+LIKE allows you to match similar values, instead of exact values.
+IN allows you to specify a list of values you'd like to include.
+BETWEEN allows you to select only rows within a certain range.
+IS NULL allows you to select rows that contain no data in a given column.
+AND allows you to select only rows that satisfy two conditions.
+OR allows you to select rows that satisfy either of two conditions.
+NOT allows you to select rows that do not match a certain condition.
+*/
+
+/* Use dataset from Billboard Music Charts. It contains year-end results of the year's top 100 songs from 1956-2013.  */
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
