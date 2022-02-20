@@ -204,8 +204,13 @@ LIKE is a logical operator in SQL that allows you to match on similar values rat
 
 In general, putting double quotes around a word or phrase will indicate that you are referring to that column name. 
 
-The % represents any character or set of characters */
+Like is case-sensitive. The % represents any character or set of characters. */
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" LIKE 'Snoop%'
+
+/* Use ILIKE to ignore case when matching values */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE "group" ILIKE 'snoop%'
 
