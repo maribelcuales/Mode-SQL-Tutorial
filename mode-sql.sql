@@ -219,3 +219,9 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE artist ILIKE 'dr_ke'
 
+/* Query for all rows which Ludacris was a member of the group.*/
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE "group" ILIKE '%ludacris%'
+
+
