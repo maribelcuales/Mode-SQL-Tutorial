@@ -214,3 +214,8 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" ILIKE 'snoop%'
 
+/* You can also use _ (a single underscore) to substitute for an individual character. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE artist ILIKE 'dr_ke'
+
