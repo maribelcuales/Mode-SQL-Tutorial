@@ -224,4 +224,9 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" ILIKE '%ludacris%'
 
+/* Query for all rows which the first artist listed in the group begins with DJ. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE "group" LIKE 'DJ%'
+
 
