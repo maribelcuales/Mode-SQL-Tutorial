@@ -195,8 +195,16 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
 ORDER BY year DESC, year_rank
 
-/*SQL LIKE Operator 
-LIKE is a logical operator in SQL that allows you to match on similar values rather than exact ones. */
+/*
+SQL LIKE Operator 
+LIKE is a logical operator in SQL that allows you to match on similar values rather than exact ones. 
+*/
+
+/* The "group" appears in double quotations as a way of indicating that you are referring to the column name "group", not the SQL function. 
+
+In general, putting double quotes around a word or phrase will indicate that you are referring to that column name. 
+
+The % represents any character or set of characters */
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" LIKE 'Snoop%'
