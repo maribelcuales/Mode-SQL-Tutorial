@@ -229,4 +229,12 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" LIKE 'DJ%'
 
+/* 
+ SQL IN
+ IN is a logical operator in SQL that allows you to specify a list of values that you'd like to include in the results. 
+*/
 
+/* Query where year_rank column is equal to one of the values in the list */ 
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank IN (1, 2, 3)
