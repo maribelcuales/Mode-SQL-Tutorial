@@ -265,4 +265,7 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year_rank BETWEEN 5 AND 10 
 
- 
+/* Query above using BETWEEN 5 AND 10 is similar to this query.*/
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank >= 5 AND year_rank <= 10 
