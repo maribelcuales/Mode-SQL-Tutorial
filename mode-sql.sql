@@ -254,3 +254,15 @@ SELECT *
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" IN ('M.C Hammer', 'Hammer', 'Elvis Presley')
+
+/* 
+SQL BETWEEN
+BETWEEN is a logical operator in SQL that allows you to select only rows that are within a specific range. It has to be paired with the AND operator.
+*/
+
+/* Query to return year rank between the range bounds of 5 and 10. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank BETWEEN 5 AND 10 
+
+ 
