@@ -283,3 +283,8 @@ Some tables contain null values—cells with no data in them at all.
 
 You can select rows that contain no data in a given column by using IS NULL
 */
+
+/* Query for rows where artist is null.*/
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE artist IS NULL 
