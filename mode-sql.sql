@@ -274,3 +274,12 @@ SELECT *
 SELECT * 
   FROM tutorial.billboard_top_100_year_end
  WHERE year BETWEEN 1985 AND 1990
+
+/*
+IS NULL operator 
+IS NULL is a logical operator in SQL that allows you to exclude rows with missing data from your results.
+
+Some tables contain null values—cells with no data in them at all.
+
+You can select rows that contain no data in a given column by using IS NULL
+*/
