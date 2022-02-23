@@ -282,9 +282,16 @@ IS NULL is a logical operator in SQL that allows you to exclude rows with missin
 Some tables contain null values—cells with no data in them at all.
 
 You can select rows that contain no data in a given column by using IS NULL
+
+WHERE artist = NULL will not work—you can't perform arithmetic on null values. 
 */
 
 /* Query for rows where artist is null.*/
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE artist IS NULL 
+
+/* Query for rows where song_name is null.*/
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE song_name IS NULL 
