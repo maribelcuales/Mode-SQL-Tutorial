@@ -305,3 +305,11 @@ It is a logical operator in SQL that allows you to select only rows that satisfy
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year = 2012 AND year_rank <= 10
+
+/* You can use SQL's AND operator with additional AND statements or any other comparison operator, as many times as you want. */
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2012
+  AND year_rank <= 10
+  AND "group" ILIKE '%feat%'
+
