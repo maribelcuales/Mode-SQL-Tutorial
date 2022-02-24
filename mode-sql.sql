@@ -295,3 +295,8 @@ SELECT *
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE song_name IS NULL 
+
+/* 
+SQL AND 
+It is a logical operator in SQL that allows you to select only rows that satisfy two conditions. 
+*/
