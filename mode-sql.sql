@@ -300,3 +300,8 @@ SELECT *
 SQL AND 
 It is a logical operator in SQL that allows you to select only rows that satisfy two conditions. 
 */
+
+/* Query for rows of the top 10 recordings in 2012*/
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2012 AND year_rank <= 10
