@@ -324,3 +324,10 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year_rank = 1
    AND year IN (1990, 2000, 2010)
+
+/* Write a query that lists all songs from the 1960s with "love" in the title. */
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year BETWEEN 1960 AND 1969
+   AND song_name ILIKE '%love%'
+
