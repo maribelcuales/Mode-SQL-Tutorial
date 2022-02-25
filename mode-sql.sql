@@ -310,6 +310,11 @@ SELECT *
 SELECT * 
   FROM tutorial.billboard_top_100_year_end
  WHERE year = 2012
-  AND year_rank <= 10
-  AND "group" ILIKE '%feat%'
+   AND year_rank <= 10
+   AND "group" ILIKE '%feat%'
 
+/* Write a query that surfaces all rows for top-10 hits for which Ludacris is part of the Group. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank <= 10
+   AND "group" ILIKE '%Ludacris%'
