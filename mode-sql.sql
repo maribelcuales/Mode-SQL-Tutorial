@@ -342,7 +342,7 @@ It works the same way as AND, which selects the rows that satisfy both of two co
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year_rank = 5 OR artist = 'Gotye' 
-
+tutorial.billboard_top_100_year_end
 /* Query for rows where year rank is 5 OR group contains the word '%feat%'.*/
 SELECT *
   FROM tutorial.billboard_top_100_year_end
@@ -353,4 +353,10 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year = 2013
    AND ("group" ILIKE '%macklemore%' OR "group" ILIKE '%timberlake%')
+
+/* Query returning rows for top-10 songs that featured either Katy Perry of Bon Jovi. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank <= 10
+   AND ("group" ILIKE '%katy perry%' OR "group" ILIKE '%bon jovi%')
 
