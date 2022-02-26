@@ -331,3 +331,12 @@ SELECT *
  WHERE year BETWEEN 1960 AND 1969
    AND song_name ILIKE '%love%'
 
+/* 
+SQL OR
+OR is a logical operator in SQL that allows you to select rows that satisfy either of two conditions. It works the same way as AND, which selects the rows that satisfy both of two conditions.
+*/
+
+/*Query for rows where year_rank is 5 OR artist is 'Gotye'.*/
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank = 5 OR artist = 'Gotye' 
