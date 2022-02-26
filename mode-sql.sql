@@ -360,3 +360,14 @@ SELECT *
  WHERE year_rank <= 10
    AND ("group" ILIKE '%katy perry%' OR "group" ILIKE '%bon jovi%')
 
+/* Query for all songs with titles that contain the word "California" in either the 1970s or 1990s. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end 
+ WHERE song_name LIKE '%California%'
+   AND (year BETWEEN 1970 AND 1979 OR year BETWEEN 1990 AND 1999)
+
+SELECT *
+  FROM tutorial.billboard_top_100_year_end 
+ WHERE song_name ILIKE '%california%'
+   AND (year BETWEEN 1970 AND 1979 OR year BETWEEN 1990 AND 1999)
+
