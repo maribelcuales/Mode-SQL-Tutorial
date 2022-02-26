@@ -340,3 +340,9 @@ OR is a logical operator in SQL that allows you to select rows that satisfy eith
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year_rank = 5 OR artist = 'Gotye' 
+
+/* Query for rows where year rank is 5 OR group contains the word '%feat%'.*/
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank = 5 OR "group" ILIKE '%feat%'
+
