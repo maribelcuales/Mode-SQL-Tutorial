@@ -411,3 +411,8 @@ SELECT *
  WHERE year = 2013 
    AND "group" NOT ILIKE '%macklemore%'
 
+/* NOT is also frequently used to identify non-null rows, but the syntax is somewhat special—you need to include IS beforehand. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end 
+ WHERE year = 2013
+   AND artist IS NOT NULL
