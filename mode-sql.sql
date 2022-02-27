@@ -1,7 +1,7 @@
-/* Query/select all */
+/* Query to select all */
 SELECT * FROM tutorial.us_housing_units
 
-/* Query/select all without using * */
+/* Query to select all without using * */
 SELECT  year,
         month,
         month_name,
@@ -11,7 +11,7 @@ SELECT  year,
         northeast
   FROM tutorial.us_housing_units
 
-/* Query year, month, and west */
+/* Query for year, month, and west */
 SELECT  year,
         month, 
         west 
@@ -93,7 +93,7 @@ SELECT *
   FROM tutorial.us_housing_units
  WHERE month_name > 'January'
 
-/*NOT a good query */
+/*Not a good query example */
 SELECT *
   FROM tutorial.us_housing_units
  WHERE month_name > 'J'
@@ -195,6 +195,7 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
 ORDER BY year DESC, year_rank
 
+
 /*
 SQL LIKE Operator 
 LIKE is a logical operator in SQL that allows you to match on similar values rather than exact ones. 
@@ -229,8 +230,9 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" LIKE 'DJ%'
 
+
 /* 
- SQL IN
+ SQL IN Operator 
  IN is a logical operator in SQL that allows you to specify a list of values that you'd like to include in the results. 
 */
 
@@ -255,6 +257,7 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE "group" IN ('M.C Hammer', 'Hammer', 'Elvis Presley')
 
+
 /* 
 SQL BETWEEN
 BETWEEN is a logical operator in SQL that allows you to select only rows that are within a specific range. It has to be paired with the AND operator.
@@ -274,6 +277,7 @@ SELECT *
 SELECT * 
   FROM tutorial.billboard_top_100_year_end
  WHERE year BETWEEN 1985 AND 1990
+
 
 /*
 IS NULL operator 
@@ -296,8 +300,9 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE song_name IS NULL 
 
+
 /* 
-SQL AND 
+SQL AND Operator 
 It is a logical operator in SQL that allows you to select only rows that satisfy two conditions. 
 */
 
@@ -331,8 +336,9 @@ SELECT *
  WHERE year BETWEEN 1960 AND 1969
    AND song_name ILIKE '%love%'
 
+
 /* 
-SQL OR
+SQL OR Operator 
 OR is a logical operator in SQL that allows you to select rows that satisfy either of two conditions. 
 
 It works the same way as AND, which selects the rows that satisfy both of two conditions.
@@ -381,6 +387,7 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end 
  WHERE "group" ILIKE '%dr. dre%'
    AND (year < 2001 OR year > 2009)
+
 
 /* 
 SQL NOT OPERATOR
