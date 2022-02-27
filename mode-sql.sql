@@ -399,3 +399,9 @@ SELECT *
  WHERE year = 2013
    AND year_rank NOT > 3
 
+/* Right way using > and <: Simply use the opposite comparative operator. */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end 
+ WHERE year = 2013 
+   AND year_rank <= 3
+
