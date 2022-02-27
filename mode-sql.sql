@@ -405,3 +405,9 @@ SELECT *
  WHERE year = 2013 
    AND year_rank <= 3
 
+/* NOT is commonly used with LIKE. Using both together on a query will make the specified name disappear from the returned results.*/
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end 
+ WHERE year = 2013 
+   AND "group" NOT ILIKE '%macklemore%'
+
