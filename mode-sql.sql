@@ -382,4 +382,14 @@ SELECT *
  WHERE "group" ILIKE '%dr. dre%'
    AND (year < 2001 OR year > 2009)
 
+/* 
+SQL NOT OPERATOR
+NOT is a logical operator in SQL that you can put before any conditional statement to select rows for which that statement is false.
+*/
+
+/* Query for rows in year 2013 but NOT song rank 2 and 3.*/ 
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end 
+ WHERE year = 2013
+   AND year_rank NOT BETWEEN 2 AND 3
 
