@@ -416,3 +416,15 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end 
  WHERE year = 2013
    AND artist IS NOT NULL
+
+/* Write a query that returns all rows for songs that were on the charts in 2013 and do not contain the letter "a". */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE song_name NOT ILIKE '%a%'
+   AND year = 2013
+
+SELECT *
+  FROM tutorial.billboard_top_100_year_end 
+ WHERE year = 2013
+   AND song_name NOT ILIKE '%a%'
+
