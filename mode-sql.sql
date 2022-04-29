@@ -424,7 +424,7 @@ SELECT *
  WHERE year = 2013
    AND artist IS NOT NULL
 
-/* Write a query that returns all rows for songs that were on the charts in 2013 and do not contain the letter "a". */
+/* Write a query that returns all rows for songs that were on the charts in 2013 and do NOT contain the letter "a". */
 SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE song_name NOT ILIKE '%a%'
@@ -434,4 +434,17 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end 
  WHERE year = 2013
    AND song_name NOT ILIKE '%a%'
+
+
+/*SQL ORDER BY */
+/* 
+After learning how to filter data, it's time to learn how to sort data 
+
+ORDER BY allows you to reorder your results based on the data in one or more columns.  
+*/
+
+/* Order by one of the columns */
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ ORDER BY artist
 
