@@ -443,8 +443,14 @@ After learning how to filter data, it's time to learn how to sort data
 ORDER BY allows you to reorder your results based on the data in one or more columns.  
 */
 
-/* Order by one of the columns */
+/* ORDER BY one of the columns */
 SELECT * 
   FROM tutorial.billboard_top_100_year_end
  ORDER BY artist
 
+
+/* ORDER BY using a numerical column */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2013
+ ORDER BY year_rank
