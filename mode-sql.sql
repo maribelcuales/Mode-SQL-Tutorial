@@ -460,4 +460,10 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year = 2013
  ORDER BY year_rank DESC
- 
+
+/* Write a query that returns all rows from 2012, ordered by song title from Z to A (Descending) */
+SELECT *
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2012
+ ORDER BY song_name DESC
+
