@@ -479,3 +479,9 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
   WHERE year_rank <= 3
  ORDER BY year_rank, year DESC
+
+/* Query ORDER BY by substituting numbers for column names */
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year_rank <= 3
+ ORDER BY 2, 1 DESC
