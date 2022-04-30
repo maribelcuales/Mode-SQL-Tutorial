@@ -467,3 +467,9 @@ SELECT *
  WHERE year = 2012
  ORDER BY song_name DESC
 
+/* ORDERING DATA BY MULTIPLE COLUMNS */
+/* Query to make the most recent years come first but orders top-rank songs before lower-ranked songs */ 
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+  WHERE year_rank <= 3
+ ORDER BY year DESC, year_rank
