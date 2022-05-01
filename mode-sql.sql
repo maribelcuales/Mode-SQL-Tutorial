@@ -491,3 +491,19 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year = 2010
  ORDER BY year_rank, artist
+
+/* USING COMMENTS: Use-- (two dashes) to comment out everything to the right of them on a given line: 
+
+-- Use /* to add comments accross multiple lines */  
+
+SELECT *  --This comment won't affect the way the code runs
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2013
+
+/* Query all rows for which T-Pain was a group member, ORDERED BY rank on the charts, from lowest to highest rank (from 100 to 1).*/
+
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ WHERE "group" ILIKE '%t-pain%'
+ ORDER BY year_rank DESC
+
