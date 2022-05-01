@@ -485,3 +485,9 @@ SELECT *
   FROM tutorial.billboard_top_100_year_end
  WHERE year_rank <= 3
  ORDER BY 2, 1 DESC
+
+/* Query that returns all rows from 2010 ordered by rank, with artists ordered alphabetically for each song. */
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year = 2010
+ ORDER BY year_rank, artist
