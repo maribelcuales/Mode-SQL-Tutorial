@@ -507,3 +507,11 @@ SELECT *
  WHERE "group" ILIKE '%t-pain%'
  ORDER BY year_rank DESC
 
+/* Query that returns songs that ranked between 10 and 20 (inclusive) in 1993, 2003, or 2013. Order the results by year and rank, and leave a comment on each line of the WHERE clause to indicate what that line does */
+
+SELECT * 
+  FROM tutorial.billboard_top_100_year_end
+ WHERE year IN (1993, 2003, 2013) -- Select the relevant years 
+    AND year_rank BETWEEN 10 AND 20 -- Limit rank to 10-20
+ ORDER BY year, year_rank
+
