@@ -26,7 +26,7 @@ SELECT COUNT(high)
 SELECT COUNT(low) -- result: 3535 
   FROM tutorial.aapl_historical_stock_price
 
-SELECT COUNT(low) AS low --Solution (same result 3535) 
+SELECT COUNT(low) AS low -- Add column name
   FROM tutorial.aapl_historical_stock_price
 
 
@@ -35,3 +35,8 @@ SELECT COUNT(low) AS low --Solution (same result 3535)
 SELECT COUNT(date)
   FROM tutorial.aapl_historical_stock_price
 
+SELECT COUNT(date) AS count_of_date -- Add column name
+  FROM tutorial.aapl_historical_stock_price
+
+SELECT COUNT(date) AS "Count of Date" -- Add column name with spaces
+  FROM tutorial.aapl_historical_stock_price
