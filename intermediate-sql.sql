@@ -29,3 +29,9 @@ SELECT COUNT(low) -- result: 3535
 SELECT COUNT(low) AS low --Solution (same result 3535) 
   FROM tutorial.aapl_historical_stock_price
 
+
+-- Counting non-numerical columns
+-- COUNT simply counts the total number of non-null rows, not the distinct values 
+SELECT COUNT(date)
+  FROM tutorial.aapl_historical_stock_price
+
