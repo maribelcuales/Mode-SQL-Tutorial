@@ -11,3 +11,9 @@ MIN and MAX - return the lowest and highest values in a particular column, respe
 AVG - calculates the average of a group of selected values.
 */
 
+/* SQL COUNT 
+COUNT is a SQL aggregate function for counting the number of rows in a particular column.
+*/
+SELECT COUNT(*) -- using COUNT(1) has the same effect
+  FROM tutorial.aapl_historical_stock_price
+
