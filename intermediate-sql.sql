@@ -17,3 +17,8 @@ COUNT is a SQL aggregate function for counting the number of rows in a particula
 SELECT COUNT(*) -- using COUNT(1) has the same effect
   FROM tutorial.aapl_historical_stock_price
 
+-- Counting individual columns 
+-- Provide a count of all rows where high column is not null 
+SELECT COUNT(high)
+  FROM tutorial.aapl_historical_stock_price
+
