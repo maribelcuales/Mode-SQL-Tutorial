@@ -22,3 +22,10 @@ SELECT COUNT(*) -- using COUNT(1) has the same effect
 SELECT COUNT(high)
   FROM tutorial.aapl_historical_stock_price
 
+-- Query to count number of non-null rows in the low column 
+SELECT COUNT(low) -- result: 3535 
+  FROM tutorial.aapl_historical_stock_price
+
+SELECT COUNT(low) AS low --Solution (same result 3535) 
+  FROM tutorial.aapl_historical_stock_price
+
