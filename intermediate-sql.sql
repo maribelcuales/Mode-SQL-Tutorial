@@ -57,8 +57,14 @@ SELECT COUNT(year) AS year,
 /* SQL SUM  
 - is a SQL Aggregate function that totals the values in a given column 
 - can only use on numerical columns 
+- aggregators only aggregate vertically 
+- If you want to perform a calculation across rows, you would do this with simple arithmetic.
 */
 
-SELECT SUM(volume)
+SELECT SUM(volume) AS "Sum of Volume"
+  FROM tutorial.aapl_historical_stock_price
+
+-- Query to calculate the average opening price (hint: you will need to use both COUNT and SUM, as well as some simple arithmetic.). 
+SELECT SUM(open)/COUNT(open) AS avg_open_price 
   FROM tutorial.aapl_historical_stock_price
 
