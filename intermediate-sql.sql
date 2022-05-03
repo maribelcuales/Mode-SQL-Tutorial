@@ -53,3 +53,12 @@ SELECT COUNT(year) AS year,
        COUNT(volume) AS volume
   FROM tutorial.aapl_historical_stock_price
 
+
+/* SQL SUM  
+- is a SQL Aggregate function that totals the values in a given column 
+- can only use on numerical columns 
+*/
+
+SELECT SUM(volume)
+  FROM tutorial.aapl_historical_stock_price
+
