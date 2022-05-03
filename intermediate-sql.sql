@@ -40,3 +40,16 @@ SELECT COUNT(date) AS count_of_date -- Add column name
 
 SELECT COUNT(date) AS "Count of Date" -- Add column name with spaces
   FROM tutorial.aapl_historical_stock_price
+
+
+-- Query that determines counts of every single column
+-- With these counts, can you tell which column has the most null values?
+SELECT COUNT(year) AS year,
+       COUNT(month) AS month,
+       COUNT(open) AS open,
+       COUNT(high) AS high,
+       COUNT(low) AS low,
+       COUNT(close) AS close,
+       COUNT(volume) AS volume
+  FROM tutorial.aapl_historical_stock_price
+
