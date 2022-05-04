@@ -82,3 +82,8 @@ SELECT MIN(volume) AS min_volume,
 SELECT MIN(low)
   FROM tutorial.aapl_historical_stock_price
 
+-- Query for the highest single-day increase in Apple's share value
+SELECT MAX(close - open)
+  FROM tutorial.aapl_historical_stock_price
+
+
