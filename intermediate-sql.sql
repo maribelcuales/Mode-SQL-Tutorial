@@ -68,3 +68,13 @@ SELECT SUM(volume) AS "Sum of Volume"
 SELECT SUM(open)/COUNT(open) AS avg_open_price 
   FROM tutorial.aapl_historical_stock_price
 
+/* SQL MIN/MAX  
+- MIN and MAX are SQL aggregation functions that return the lowest and highest values in a particular column.
+- can be used on non-numerical columns 
+*/
+
+-- Query selects the MIN and the MAX from the numerical volume column in the Apple stock prices dataset.
+SELECT MIN(volume) AS min_volume,
+       MAX(volume) AS max_volume
+  FROM tutorial.aapl_historical_stock_price
+
