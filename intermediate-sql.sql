@@ -97,3 +97,6 @@ SELECT MAX(close - open)
 SELECT AVG(high)
   FROM tutorial.aapl_historical_stock_price
  WHERE high IS NOT NULL 
+
+SELECT AVG(high) -- same results with the prev query
+  FROM tutorial.aapl_historical_stock_price
