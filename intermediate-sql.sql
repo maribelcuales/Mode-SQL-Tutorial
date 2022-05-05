@@ -87,3 +87,13 @@ SELECT MAX(close - open)
   FROM tutorial.aapl_historical_stock_price
 
 
+/* SQL AVG 
+- Calculates the average of a selected group of values.
+- Can only be used on numerical columns 
+- Ignores nulls completely 
+*/
+
+-- Two queries of the Apple Stock Prices dataset 
+SELECT AVG(high)
+  FROM tutorial.aapl_historical_stock_price
+ WHERE high IS NOT NULL 
