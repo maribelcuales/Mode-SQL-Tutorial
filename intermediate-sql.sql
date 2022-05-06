@@ -106,3 +106,15 @@ SELECT AVG(high) -- same results with the prev query
 SELECT AVG(volume) AS avg_volume
   FROM tutorial.aapl_historical_stock_price
 
+
+/* SQL GROUP BY
+- aggregate only part of a table (e.g count the number of entries for each year) 
+- allows you to separate data into groups  
+*/
+
+-- Apple stock prices dataset 
+SELECT year,
+       COUNT(*) AS count
+  FROM tutorial.aapl_historical_stock_price
+  GROUP BY year 
+
