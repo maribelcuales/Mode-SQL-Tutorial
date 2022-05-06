@@ -91,6 +91,7 @@ SELECT MAX(close - open)
 - Calculates the average of a selected group of values.
 - Can only be used on numerical columns 
 - Ignores nulls completely 
+- To treat null values as 0, write a statement that changes the nulls to 0
 */
 
 -- Two queries of the Apple Stock Prices dataset 
@@ -100,3 +101,8 @@ SELECT AVG(high)
 
 SELECT AVG(high) -- same results with the prev query
   FROM tutorial.aapl_historical_stock_price
+
+-- Write a query that calculates the average daily trade volume for Apple stock.
+SELECT AVG(volume) AS avg_volume
+  FROM tutorial.aapl_historical_stock_price
+
