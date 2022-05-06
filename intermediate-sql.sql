@@ -125,4 +125,11 @@ SELECT year,
   FROM tutorial.aapl_historical_stock_price
  GROUP BY year, month 
 
+-- Calculate the total number of shares traded each month. Order your results chronologically.
+SELECT year,
+       month,
+       SUM(volume) AS volume_sum
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY year, month
+ ORDER BY year, month 
 
