@@ -112,9 +112,17 @@ SELECT AVG(volume) AS avg_volume
 - allows you to separate data into groups  
 */
 
--- Apple stock prices dataset 
+-- Query to count number of entries per year
 SELECT year,
        COUNT(*) AS count
   FROM tutorial.aapl_historical_stock_price
   GROUP BY year 
+
+-- To group by multiple columns, separate column names with commas—just as with ORDER BY:
+SELECT year,
+       month, 
+       COUNT(*) AS count
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY year, month 
+
 
