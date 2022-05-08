@@ -132,4 +132,19 @@ SELECT year,
   FROM tutorial.aapl_historical_stock_price
  GROUP BY year, month
  ORDER BY year, month 
+ 
+/* GROUP BY column numbers 
+- As with ORDER BY, you can substitute numbers for column names in the GROUP BY clause.
+
+- use this ONLY when you're grouping many columns 
+*/ 
+SELECT year,
+       month,
+       COUNT(*) AS count
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY 1, 2 
+
+
+
+
 
