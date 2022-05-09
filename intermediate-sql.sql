@@ -150,6 +150,12 @@ SELECT year,
 - This is actually a nice way to do things because you know you're going to get the correct aggregates.
 */
 
-
+-- Query to calculate the average daily price change in Apple stock, grouped by year.
+SELECT year,
+       AVG(close - open) AS avg_daily_change
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY 1
+ ORDER BY 2
+ 
 
 
