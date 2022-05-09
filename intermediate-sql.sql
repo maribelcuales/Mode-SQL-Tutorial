@@ -144,6 +144,11 @@ SELECT year,
   FROM tutorial.aapl_historical_stock_price
  GROUP BY 1, 2 
 
+/* GROUP BY with LIMIT 
+- SQL evaluates the aggregations before the LIMIT clause. 
+- If you group by a column with enough unique values that it exceeds the LIMIT number, the aggregates will be calculated, and then some rows will simply be omitted from the results.
+- This is actually a nice way to do things because you know you're going to get the correct aggregates.
+*/
 
 
 
