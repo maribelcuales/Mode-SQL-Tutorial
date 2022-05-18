@@ -157,5 +157,10 @@ SELECT year,
  GROUP BY 1
  ORDER BY 2
  
+SELECT year,
+       AVG(close - open) AS "Average Daily Change"
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY 1
+ ORDER BY 2
 
 
