@@ -164,7 +164,7 @@ SELECT year,
  ORDER BY 2
 
 /* 
-
+Write a query that calculates the lowest and highest prices that Apple stock achieved each month.
 */
 SELECT year,
        month,
