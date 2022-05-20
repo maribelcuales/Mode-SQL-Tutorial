@@ -163,4 +163,13 @@ SELECT year,
  GROUP BY 1
  ORDER BY 2
 
+/* 
 
+*/
+SELECT year,
+       month,
+       MIN(low) AS lowest_price,
+       MAX(high) AS highest_price
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY 1, 2
+ ORDER BY 1, 2
