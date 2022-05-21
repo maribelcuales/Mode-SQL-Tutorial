@@ -173,3 +173,13 @@ SELECT year,
   FROM tutorial.aapl_historical_stock_price
  GROUP BY 1, 2
  ORDER BY 1, 2
+
+/* 
+Write a query that calculates the lowest prices that Apple stock achieved each month.
+*/
+SELECT year,
+       month,
+       MIN(low) AS "Lowest Apple Stock Price",
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY 1, 2
+ ORDER BY 1, 2
