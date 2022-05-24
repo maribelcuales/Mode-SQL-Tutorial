@@ -187,12 +187,12 @@ SELECT year,
 
 /* 
 SQL HAVING
-
-e.g you might want to find every month during which AAPL stock worked its way over $400/share. The WHERE clause won't work for this because it doesn't allow you to filter on aggregate columns—that's where the HAVING clause comes in.ABORT
-
 HAVING is the "clean" way to filter a query that has been aggregated, but this is also commonly done using a subquery, which you will learn about in a later lesson.
+
+The WHERE clause won't work for this because it doesn't allow you to filter on aggregate columns—that's where the HAVING clause comes in.
 */
 
+-- Query find every month during which AAPL stock worked its way over $400/share. 
 SELECT year,
        month,
        MAX(high) AS month_high
