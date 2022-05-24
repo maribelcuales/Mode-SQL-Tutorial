@@ -200,3 +200,16 @@ SELECT year,
  GROUP BY year, month 
 HAVING MAX(high) > 400
  ORDER BY year, month
+
+/*
+QUERY CLAUSE ORDER 
+The order in which you write the clauses is important. Here's the order for everything you've learned so far:
+
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+*/
+
