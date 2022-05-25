@@ -203,7 +203,7 @@ HAVING MAX(high) > 400
 
 /*
 QUERY CLAUSE ORDER 
-The order in which you write the clauses is important. Here's the order for everything you've learned so far:
+The order in which you write the clauses is important. Here'rs the order for everything you've learned so far:
 
 SELECT
 FROM
@@ -212,4 +212,21 @@ GROUP BY
 HAVING
 ORDER BY
 */
+
+/* 
+SQL CASE Statement 
+
+The CASE statement is SQL's way of handling if/then logic. 
+
+The CASE statement is followed by at least one pair of WHEN and THEN statements—SQL's equivalent of IF/THEN in Excel.
+
+Every CASE statement must end with the END statement. The ELSE statement is optional, and provides a way to capture values not specified in the WHEN/THEN statements.
+*/
+
+SELECT player_name, 
+       year, 
+       CASE WHEN year = 'SR' THEN 'yes' --checks each row if conditional statement is true  
+            ELSE NULL END AS is_a_senior
+  FROM benn.college_football_players
+
 
