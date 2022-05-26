@@ -239,4 +239,14 @@ SELECT player_name,
             ELSE 'no' END AS is_a_senior
   FROM benn.college_football_players
 
+/* 
+Query that includes a column that is flagged 'yes' when a player is from California. 
+Sort the results with those players first. 
+*/
+SELECT player_name,
+       state,
+       CASE WHEN state = 'CA' THEN 'yes'
+            ELSE NULL END AS from_california
+  FROM benn.college_football_players
+ ORDER BY 3
 
