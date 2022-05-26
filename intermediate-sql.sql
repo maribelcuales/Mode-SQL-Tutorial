@@ -228,6 +228,15 @@ SELECT player_name, -- values for player_name & year
        CASE WHEN year = 'SR' THEN 'yes' --checks each row if conditional statement is true  
             ELSE NULL END AS is_a_senior -- if false, nothing happens in that row and a null value is left on the column 
   FROM benn.college_football_players
-git 
+ 
+
+/* 
+CASE Query: Replace nulls with "no" 
+*/ 
+SELECT player_name,
+       year,
+       CASE WHEN year = 'SR' THEN 'yes'
+            ELSE 'no' END AS is_a_senior
+  FROM benn.college_football_players
 
 
