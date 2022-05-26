@@ -223,10 +223,11 @@ The CASE statement is followed by at least one pair of WHEN and THEN statementsâ
 Every CASE statement must end with the END statement. The ELSE statement is optional, and provides a way to capture values not specified in the WHEN/THEN statements.
 */
 
-SELECT player_name, 
+SELECT player_name, -- values for player_name & year
        year, 
        CASE WHEN year = 'SR' THEN 'yes' --checks each row if conditional statement is true  
-            ELSE NULL END AS is_a_senior
+            ELSE NULL END AS is_a_senior -- if false, nothing happens in that row and a null value is left on the column 
   FROM benn.college_football_players
+git 
 
 
