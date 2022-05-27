@@ -250,3 +250,15 @@ SELECT player_name,
   FROM benn.college_football_players
  ORDER BY 3
 
+/* 
+Adding multiple conditions to a CASE statement 
+*/
+
+-- Can define a number of outcomes in a CASE statement by including as many WHEN/THEN statements as you'd like
+SELECT player_name,
+       weight,
+       CASE WHEN weight > 250 THEN 'over 250'
+            WHEN weight > 200 THEN '201-250'
+            WHEN weight > 175 THEN '176-200'
+            ELSE '175 or under' END AS weight_group
+  FROM benn.college_football_players
