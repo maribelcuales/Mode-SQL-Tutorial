@@ -272,5 +272,15 @@ SELECT player_name,
             ELSE '175 or under' END AS weight_group
   FROM benn.college_football_players
 
+/* 
+Write a query that includes players' names and a column that classifies them into four categories based on height. Answer below is just one of many possible answers, since you could divide players' heights in many ways.
+*/
+SELECT player_name,
+       height,
+       CASE WHEN height > 74 THEN 'over 74'
+            WHEN height > 72 AND height <= 74 THEN '73-74'
+            WHEN height > 70 AND height <= 72 THEN '71-72'
+            ELSE 'under 70' END AS height_group
+  FROM benn.college_football_players
 
 
