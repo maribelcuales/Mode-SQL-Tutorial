@@ -283,4 +283,11 @@ SELECT player_name,
             ELSE 'under 70' END AS height_group
   FROM benn.college_football_players
 
+-- You can also string together multiple conditional statements with AND and OR the same way you might in a WHERE clause:
+SELECT player_name,
+       CASE WHEN year = 'FR' AND position = 'WR' THEN 'frosh_wr'
+            ELSE NULL END AS sample_case_statement 
+  FROM benn.college_football_players
+
+
 
