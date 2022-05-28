@@ -285,9 +285,15 @@ SELECT player_name,
 
 -- You can also string together multiple conditional statements with AND and OR the same way you might in a WHERE clause:
 SELECT player_name,
+       year,
+       position,
        CASE WHEN year = 'FR' AND position = 'WR' THEN 'frosh_wr'
             ELSE NULL END AS sample_case_statement 
   FROM benn.college_football_players
 
+-- Write a query that selects all columns and adds an additional column that displays the player's name if that player is a junior or senior.
+SELECT *,
+       CASE WHEN year IN ('JR', 'SR') THEN player_name ELSE NULL END AS upperclass_player_name
+  FROM benn.college_football_players
 
 
