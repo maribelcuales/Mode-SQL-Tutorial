@@ -296,4 +296,25 @@ SELECT *,
        CASE WHEN year IN ('JR', 'SR') THEN player_name ELSE NULL END AS upperclass_player_name
   FROM benn.college_football_players
 
+/* 
+A quick review of CASE basics:
+The CASE statement always goes in the SELECT clause
+CASE must include the following components: WHEN, THEN, and END. ELSE is an optional component.
+You can make any conditional statement using any conditional operator (like WHERE ) between WHEN and THEN. This includes stringing together multiple conditional statements using AND and OR.
+You can include multiple WHEN statements, as well as an ELSE statement to deal with any unaddressed conditions.
+*/
+
+/* 
+Using CASE with Aggregate Functions
+
+Only count rows that fulfill a certain condition. Since COUNT ignores nulls, you could use a CASE statement to evaluate the condition and produce null or non-null values depending on the outcome:
+*/
+SELECT CASE WHEN year = 'FR' THEN 'FR'
+            ELSE 'Not FR' END AS year_group,
+            COUNT(1) AS count
+  
+  FROM benn.college_football_players
+ GROUP BY CASE WHEN year = 'FR' THEN 'FR'
+               ELSE 'Not FR' END 
+               
 
