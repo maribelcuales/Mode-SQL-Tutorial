@@ -316,5 +316,9 @@ SELECT CASE WHEN year = 'FR' THEN 'FR'
   FROM benn.college_football_players
  GROUP BY CASE WHEN year = 'FR' THEN 'FR'
                ELSE 'Not FR' END 
-               
+
+-- Use a WHERE clause to filter out the rows I don't want to count?" 
+SELECT COUNT(1) AS fr_count
+  FROM benn.college_football_players
+ WHERE year = 'FR'
 
