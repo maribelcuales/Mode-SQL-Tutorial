@@ -332,3 +332,15 @@ SELECT CASE WHEN year = 'FR' THEN 'FR'
   FROM benn.college_football_players
  GROUP BY 1
 
+-- The above query is an excellent place to use numbers instead of columns in the GROUP BY clause because repeating the CASE statement in the GROUP BY clause would make the query obnoxiously long.
+
+-- use the column's alias in the GROUP BY clause like this:
+SELECT CASE WHEN year = 'FR' THEN 'FR'
+            WHEN year = 'SO' THEN 'SO'
+            WHEN year = 'JR' THEN 'JR'
+            WHEN year = 'SR' THEN 'SR'
+            ELSE 'No Year Data' END AS year_group,
+            COUNT(1) AS count
+  FROM benn.college_football_players
+ GROUP BY year_group
+
