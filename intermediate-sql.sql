@@ -367,4 +367,13 @@ SELECT CASE WHEN year = 'FR' THEN 'FR'
             *
   FROM benn.college_football_players
 
+-- Write a query that counts the number of 300lb+ players for each of the following regions: West Coast (CA, OR, WA), Texas, and Other (everywhere else).
+SELECT CASE WHEN state IN ('CA', 'OR', 'WA') THEN 'West Coast'
+            WHEN state = 'TX' THEN 'Texas'
+            ELSE 'Other' END AS arbitrary_regional_designation,
+            COUNT(1) AS players
+  FROM benn.college_football_players
+ WHERE weight >= 300
+ GROUP BY 1
+
 
