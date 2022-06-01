@@ -385,4 +385,16 @@ SELECT CASE WHEN year IN ('FR', 'SO') THEN 'underclass'
  WHERE state = 'CA'
  GROUP BY 1  
 
+/* 
+Using CASE inside of aggregate functions
 
+In the previous examples, data was displayed vertically, but in some instances, you might want to show data horizontally. This is known as "pivoting" (like a pivot table in Excel). Let's take the following query:
+*/
+SELECT CASE WHEN year = 'FR' THEN 'FR'
+            WHEN year = 'SO' THEN 'SO'
+            WHEN year = 'JR' THEN 'JR'
+            WHEN year = 'SR' THEN 'SR'
+            ELSE 'No Year Data' END AS year_group,
+            COUNT(1) AS count
+  FROM benn.college_football_players
+ GROUP BY 1
