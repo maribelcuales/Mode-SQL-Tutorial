@@ -404,4 +404,16 @@ SELECT COUNT(CASE WHEN year = 'FR' THEN 1 ELSE NULL END) AS fr_count,
        COUNT(CASE WHEN year = 'SO' THEN 1 ELSE NULL END) AS so_count,
        COUNT(CASE WHEN year = 'JR' THEN 1 ELSE NULL END) AS jr_count,
        COUNT(CASE WHEN year = 'SR' THEN 1 ELSE NULL END) AS sr_count
+  FROM benn.college_football_players 
+
+-- Write a query that displays the number of players in each state, with FR, SO, JR, and SR players in separate columns and another column for the total number of players. Order results such that states with the most players come first.
+SELECT state,
+       COUNT(CASE WHEN year = 'FR' THEN 1 ELSE NULL END) AS fr_count,
+       COUNT(CASE WHEN year = 'SO' THEN 1 ELSE NULL END) AS so_count,
+       COUNT(CASE WHEN year = 'JR' THEN 1 ELSE NULL END) AS jr_count,
+       COUNT(CASE WHEN year = 'SR' THEN 1 ELSE NULL END) AS sr_count,
+       COUNT(1) AS total_players
   FROM benn.college_football_players
+ GROUP BY state
+ ORDER BY total_players DESC
+
