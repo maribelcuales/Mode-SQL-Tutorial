@@ -426,4 +426,13 @@ SELECT CASE WHEN school_name < 'n' THEN 'A-M'
  GROUP BY 1
 
 
+/* 
+SQL DISTINCT 
+
+Using SQL DISTINCT for viewing unique values
+*/
+
+-- Query to select unique values from the month column in the Apple stock prices dataset: 
+SELECT DISTINCT month
+  FROM tutorial.aapl_historical_stock_price
 
