@@ -436,3 +436,6 @@ Using SQL DISTINCT for viewing unique values
 SELECT DISTINCT month
   FROM tutorial.aapl_historical_stock_price
 
+-- Query to include two (or more) columns in a SELECT DISTINCT clause, your results will contain all of the unique pairs of those two columns:
+SELECT DISTINCT year, month
+  FROM tutorial.aapl_historical_stock_price
