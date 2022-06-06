@@ -430,6 +430,8 @@ SELECT CASE WHEN school_name < 'n' THEN 'A-M'
 SQL DISTINCT 
 
 Using SQL DISTINCT for viewing unique values
+- DISTINCT can be particularly helpful when exploring a new data set.
+- Looking at the unique values on each column can help identify how you might want to group or filter the data.
 */
 
 -- Query to select unique values from the month column in the Apple stock prices dataset: 
@@ -443,4 +445,17 @@ SELECT DISTINCT year, month
 -- Write a query that returns the unique values in the year column, in chronological order.
 SELECT DISTINCT year
   FROM tutorial.aapl_historical_stock_price
- ORDER BY year
+ ORDER BY yearr
+
+
+/* 
+Using DISTINCT in aggregations
+
+You can use DISTINCT when performing an aggregation. You'll probably use it most commonly with the COUNT function.
+
+In this case, you should run the query below that counts the unique values in the month column. 
+*/
+
+
+
+
