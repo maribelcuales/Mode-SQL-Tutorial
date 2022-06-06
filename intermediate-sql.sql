@@ -452,10 +452,12 @@ SELECT DISTINCT year
 Using DISTINCT in aggregations
 
 You can use DISTINCT when performing an aggregation. You'll probably use it most commonly with the COUNT function.
-
-In this case, you should run the query below that counts the unique values in the month column. 
 */
 
+-- Query below that counts the unique values in the month column. 
+
+SELECT COUNT(DISTINCT month) AS unique_months
+  FROM tutorial.aapl_historical_stock_price
 
 
 
