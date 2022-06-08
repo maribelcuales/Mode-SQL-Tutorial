@@ -465,3 +465,14 @@ SELECT month,
   FROM tutorial.aapl_historical_stock_price
  GROUP BY month
  ORDER BY 2 DESC
+
+-- DISTINCT goes inside the aggregate function rather than at the beginning of the SELECT clause. You can SUM or AVG the distinct values in a column, but there are fewer practical applications for them. 
+
+/* 
+DISTINCT PERFORMANCE 
+
+Using DISTINCT, particularly in aggregations, can slow your queries down quite a bit.
+
+For MAX and MIN, you probably shouldn't ever use DISTINCT because the results will be the same as without DISTINCT, and the DISTINCT function will make your query substantially slower to return results.
+*/
+
