@@ -476,3 +476,9 @@ Using DISTINCT, particularly in aggregations, can slow your queries down quite a
 For MAX and MIN, you probably shouldn't ever use DISTINCT because the results will be the same as without DISTINCT, and the DISTINCT function will make your query substantially slower to return results.
 */
 
+-- Query that counts the number of unique values in the month column for each year
+SELECT year,
+       COUNT(DISTINCT month) AS months_count
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY year
+ ORDER BY year 
