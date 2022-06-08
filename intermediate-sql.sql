@@ -459,5 +459,9 @@ You can use DISTINCT when performing an aggregation. You'll probably use it most
 SELECT COUNT(DISTINCT month) AS unique_months
   FROM tutorial.aapl_historical_stock_price
 
-
-
+-- Query taking average trade volumes by month to get a sense of when Apple stock really moves:
+SELECT month,
+       AVG(volume) AS avg_trade_volume
+  FROM tutorial.aapl_historical_stock_price
+ GROUP BY month
+ ORDER BY 2 DESC
