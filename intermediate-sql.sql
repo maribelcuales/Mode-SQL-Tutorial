@@ -482,3 +482,11 @@ SELECT year,
   FROM tutorial.aapl_historical_stock_price
  GROUP BY year
  ORDER BY year 
+
+-- Write a query that separately counts the number of unique values in the month column and the number of unique values in the `year` column.
+SELECT COUNT(DISTINCT year) AS years_count,
+       COUNT(DISTINCT month) AS months_count
+  FROM tutorial.aapl_historical_stock_price
+
+
+
