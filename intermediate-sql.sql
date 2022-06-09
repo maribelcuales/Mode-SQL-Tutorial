@@ -487,6 +487,15 @@ SELECT year,
 SELECT COUNT(DISTINCT year) AS years_count,
        COUNT(DISTINCT month) AS months_count
   FROM tutorial.aapl_historical_stock_price
+  
+  
+/* 
+SQL JOINS 
 
+The real power of SQL, however, comes from working with data from multiple tables at once.
+
+The tables you've been working with up to this point are all part of the same schema in a relational database. The term "relational database" refers to the fact that the tables within it "relate" to one another—they contain common identifiers that allow information from multiple tables to be combined easily.
+
+*/
 
 
