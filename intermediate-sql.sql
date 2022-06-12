@@ -500,5 +500,13 @@ In an organization like Twitter, it now has two tables. The first table—the us
 
 */
 
+-- Query to figure out which conference has the highest average weight. Given that information is in two separate tables, how do you do that? A join!
+SELECT teams.conference AS conference,
+       AVG(players.weight) AS average_weight
+  FROM benn.college_football_players players
+  JOIN benn.college_football_teams teams
+    ON teams.school_name = players.school_name
+ GROUP BY teams.conference
+ ORDER BY AVG(players.weight) DESC
 
 
