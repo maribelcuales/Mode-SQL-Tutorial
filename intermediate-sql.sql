@@ -519,4 +519,16 @@ SELECT players.school_name,
  WHERE players.state = 'GA'
  ORDER BY players.weight DESC
 
+/*
+JOIN and ON 
+
+After the FROM statement, we have two new statements: JOIN, which is followed by a table name, and ON, which is followed by a couple column names separated by an equals sign.
+
+ON indicates how the two tables (the one after the FROM and the one after the JOIN) relate to each other. You can see in the example above that both tables contain fields called school_name. Sometimes relational fields are slightly less obvious. For example, you might have a table called schools with a field called id, which could be joined against school_id in any other table. 
+
+These relationships are sometimes called "mappings." teams.school_name and players.school_name, the two columns that map to one another, are referred to as "foreign keys" or "join keys." Their mapping is written as a conditional statement:
+*/
+
+
+
 
