@@ -521,7 +521,7 @@ SELECT players.school_name,
  ORDER BY players.weight DESC
 
 /*
-JOIN and ON 
+JOIN and ON u
 
 After the FROM statement, we have two new statements: JOIN, which is followed by a table name, and ON, which is followed by a couple column names separated by an equals sign.
 
@@ -530,7 +530,13 @@ ON indicates how the two tables (the one after the FROM and the one after the JO
 These relationships are sometimes called "mappings." teams.school_name and players.school_name, the two columns that map to one another, are referred to as "foreign keys" or "join keys." Their mapping is written as a conditional statement:
 */
 
+ON teams.school_name = players.school_name
+-- Join all rows from the players table on to rows in the teams table for which the school_name field in the players table is equal to the school_name field in the teams table.
 
-
+-- When you run a query with a join, SQL performs the same operation as it did above to every row of the table after the FROM statement. To see the full table returned by the join, try running this query:
+SELECT *
+  FROM benn.college_football_players players
+  JOIN benn.college_football_teams teams
+    ON teams.school_name = players.school_name
 
 
