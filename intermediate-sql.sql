@@ -509,6 +509,7 @@ SELECT teams.conference AS conference,
  GROUP BY teams.conference
  ORDER BY AVG(players.weight) DESC
 
+-- You can give a table an alias by adding a space after the table name and typing the intended name of the alias. As with column names, best practice here is to use all lowercase letters and underscores instead of spaces.
 
 -- Query that selects the school name, player name, position, and weight for every player in Georgia, ordered by weight (heaviest to lightest). Be sure to make an alias for the table, and to reference all column names in relation to the alias.
 SELECT players.school_name,
@@ -528,6 +529,7 @@ ON indicates how the two tables (the one after the FROM and the one after the JO
 
 These relationships are sometimes called "mappings." teams.school_name and players.school_name, the two columns that map to one another, are referred to as "foreign keys" or "join keys." Their mapping is written as a conditional statement:
 */
+
 
 
 
