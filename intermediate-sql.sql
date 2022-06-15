@@ -534,9 +534,15 @@ ON teams.school_name = players.school_name
 -- Join all rows from the players table on to rows in the teams table for which the school_name field in the players table is equal to the school_name field in the teams table.
 
 -- When you run a query with a join, SQL performs the same operation as it did above to every row of the table after the FROM statement. To see the full table returned by the join, try running this query:
-SELECT *
+SELECT *      -- returns all columns 
   FROM benn.college_football_players players
   JOIN benn.college_football_teams teams
     ON teams.school_name = players.school_name
 
+
+-- Return only columns from one table    
+SELECT players.* 
+  FROM benn.college_football_players players
+  JOIN benn.college_football_teams teams
+    ON teams.school_name = players.school_name
 
