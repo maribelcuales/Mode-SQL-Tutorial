@@ -546,3 +546,14 @@ SELECT players.*
   JOIN benn.college_football_teams teams
     ON teams.school_name = players.school_name
 
+/* 
+SQL INNER JOIN
+
+It's often the case that one or both tables being joined contain rows that don't have matches in the other table. The way this is handled depends on whether you're making an inner join or an outer join.
+
+Inner joins eliminate rows from both tables that do not satisfy the join condition set forth in the ON statement. In mathematical terms, an inner join is the intersection of the two tables.
+*/
+
+
+
+
