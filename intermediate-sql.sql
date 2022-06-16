@@ -554,6 +554,12 @@ It's often the case that one or both tables being joined contain rows that don't
 Inner joins eliminate rows from both tables that do not satisfy the join condition set forth in the ON statement. In mathematical terms, an inner join is the intersection of the two tables.
 */
 
+-- Query with both tables have columns called school_name
+SELECT players.*,
+       teams.*
+  FROM benn.college_football_players players
+  JOIN benn.college_football_teams teams
+    ON teams.school_name = players.school_name
 
 
 
