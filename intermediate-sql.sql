@@ -562,4 +562,4 @@ SELECT players.*,
     ON teams.school_name = players.school_name
 
 
-
+-- The results can only support one column with a given name—when you include 2 columns of the same name, the results will simply show the exact same result set for both columns even if the two columns should contain different data.
