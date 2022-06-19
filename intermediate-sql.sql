@@ -554,12 +554,24 @@ It's often the case that one or both tables being joined contain rows that don't
 Inner joins eliminate rows from both tables that do not satisfy the join condition set forth in the ON statement. In mathematical terms, an inner join is the intersection of the two tables.
 */
 
--- Query with both tables have columns called school_name
+-- Joining tables with identical column names
+-- Query with both tables that have columns called school_name
 SELECT players.*,
        teams.*
   FROM benn.college_football_players players
   JOIN benn.college_football_teams teams
     ON teams.school_name = players.school_name
 
-
 -- The results can only support one column with a given name—when you include 2 columns of the same name, the results will simply show the exact same result set for both columns even if the two columns should contain different data.
+
+
+-- Name columns individually 
+-- It happens that these two columns will actually contain the same data because they are used for the join key, but the following query technically allows these columns to be independent:
+SELECT players.school_name AS players_school_name,
+       teams.school_name AS teams_school_name
+  FROM benn.college_football_players players
+  JOIN benn.college_football_teams teams
+    ON teams.school_name = players.school_name
+
+    
+
