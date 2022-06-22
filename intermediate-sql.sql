@@ -594,3 +594,8 @@ LEFT JOIN - returns only unmatched rows from the left table.
 RIGHT JOIN - returns only unmatched rows from the right table.
 FULL OUTER JOIN - returns unmatched rows from both tables.
 */
+
+-- Crunchbase dataset: a crowdsourced index of startups, founders, investors, and the activities of all three
+SELECT *
+  FROM tutorial.crunchbase_companies
+
